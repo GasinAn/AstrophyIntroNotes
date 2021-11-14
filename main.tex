@@ -1,0 +1,31 @@
+% 编译方式: xelatex*2
+\documentclass{ctexbook}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{syntonly}
+%\syntaxonly
+\pagestyle{plain}
+\makeatletter
+\newcommand{\starttoc}{
+    \chapter*{\contentsname}
+    \@starttoc{toc}
+}
+\makeatother
+\renewcommand{\tableofcontents}{\twocolumn\starttoc\onecolumn}
+\hypersetup{
+	colorlinks,
+	linkcolor=blue,
+	filecolor=pink,
+	urlcolor=cyan,
+	citecolor=red,
+}
+\title{天文物理导论笔记}
+\author{GasinAn}
+\begin{document}
+    \maketitle
+    \include{copyright.tex}
+    \tableofcontents
+    \include{chapter1_celestial_sphere.tex}
+\end{document}
