@@ -1,0 +1,67 @@
+\chapter{天体力学\\Celestial Mechanics}
+
+看我PPT.
+
+圆锥曲线(conic section)统一方程
+\begin{equation*}
+    r = \frac{ed}{1+e\cos\theta}.
+\end{equation*}
+椭圆(ellipse), $ed=a(1-e^2)$. 抛物线(parabola), $ed=2p$. 双曲线(hyperbola), $ed=a(1+e^2)$.
+
+半长轴长(semimajor axis)~$a$, 半短轴长(semimajor axis)~$b$, 离心率(eccentricity)~$e$.
+
+焦点(focal point), 近$\!\text{??}\!$点(perhelion), 远$\!\text{??}\!$点(aphelion).
+
+椭圆面积$A=\pi ab$. 证明: 把单位圆横轴方向拉长$a$倍, 纵轴方向拉长$b$倍.
+
+逃逸速度(escape velocity)~$v_\text{esc}$.
+\begin{equation*}
+    v_\text{esc} = \sqrt{2GM/r}.
+\end{equation*}
+第二宇宙速度$11.2\,\text{km/s}$.
+
+质心(center of mass)~$\b{R}$.
+\begin{equation*}
+    \b{R} = \frac{
+        \sum_{i=1}^n m_i\b{r}_i
+    }{
+        \sum_{i=1}^n m_i
+    }.
+\end{equation*}
+
+折合质量(reduced mass)~$\mu$.
+\begin{equation*}
+    \mu = \frac{m_1m_2}{m_1+m_2}.
+\end{equation*}
+二体问题, 把坐标系建在其中一个天体上, 将其质量强行定为$M=m_1+m_2$, 另一天体质量强行定为$\mu$, 把日地系统的Kepler三定律, 和日地系统中地球的机械能和角动量的表达式中的$M_\odot$都换成$M$, $M_\oplus$都换成$\mu$, 就能得到二体问题的Kepler三定律和两天体的总机械能和角动量.
+
+一些有用的表达式.
+\begin{equation*}
+    ed = \frac{1}{GM}\frac{L^2}{\mu^2}.
+\end{equation*}
+\begin{equation*}
+    \mathrm{d}A=\frac{1}{2}\frac{L}{\mu}\mathrm{d}t
+\end{equation*}
+\begin{equation*}
+    k=\frac{4\pi^2}{GM}.
+\end{equation*}
+完蛋了, 把Kepler三定律直接给出来了\dots~第一式推导: 计算perhelion处的$L$, $r$有了, $v$用机械能的表达式算. 第二式推导: 三角形面积是两条边的叉乘的长度的二分之一. 第三式推导: 假装轨道是圆的.
+
+(老师没讲但很重要!)总机械能~$E$.
+\begin{equation*}
+    E =
+    \begin{cases}
+        -\frac{GM}{2a} & \text{椭圆}, \\
+         0 & \text{抛物}, \\
+         \frac{GM}{2a} & \text{双曲}. \\
+    \end{cases}
+\end{equation*}
+
+维里定理(virial theorem): 系统, 平均总动能$\left\langle T\right\rangle$, 平均总势能$\left\langle V\right\rangle$, 平均总机械能$\left\langle E\right\rangle$,
+\begin{equation*}
+    2\left\langle T\right\rangle+\left\langle V\right\rangle = 0,
+\end{equation*}
+\begin{equation*}
+    \left\langle E\right\rangle = \frac{1}{2}\left\langle V\right\rangle.
+\end{equation*}
+推论: 系统稳定, 平均总机械能必小于0.
