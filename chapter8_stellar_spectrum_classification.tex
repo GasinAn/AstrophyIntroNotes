@@ -1,0 +1,69 @@
+\chapter{恒星光谱分类\\The Classification of Stellar Spectra}
+
+Boltzmann 方程:
+\begin{equation*}
+    P \propto g\,e^{-E/kT}.
+\end{equation*}
+
+Maxwell-Boltzmann速度分布函数: 根据Boltzmann 方程, 对于理想气体, $\mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z$内的概率正比于$e^{-m(v_x^2+v_y^2+v_z^2)/2kT}$, 或者写成
+\begin{equation*}
+    p(v_x,v_y,v_z) \mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z \propto e^{-\frac{m(v_x^2+v_y^2+v_z^2)}{2kT}} \mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z.
+\end{equation*}
+Gauss积分, $e^{-\xi^2/2\sigma^2}$归一化系数是$1/\sqrt{2\pi}\sigma$, 于是乎有
+\begin{equation*}
+    p(v_x,v_y,v_z) \mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z = \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-\frac{m(v_x^2+v_y^2+v_z^2)}{2kT}} \mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z.
+\end{equation*}
+这是速度分布, 转化到速率分布, 只需把对小方块$\mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z$的积分变成对小球壳$4\pi v^2\mathrm{d}v$的积分, 于是乎有
+\begin{equation*}
+    p(v) \mathrm{d}v = \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-\frac{mv^2}{2kT}} 4\pi v^2\mathrm{d}v.
+\end{equation*}
+变成数密度分布, 只需乘上数密度, 于是乎有
+\begin{equation*}
+    n_v \mathrm{d}v = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-\frac{mv^2}{2kT}} 4\pi v^2\mathrm{d}v.
+\end{equation*}
+也就是说, $4\pi v^2\mathrm{d}v$是简并度$g$.
+
+最可几速度(most probable speed): 求导.
+
+方均根速度(root-mean-square speed): 能量均分定理$m\overline{v^2} /2=3(kT/2)$. 
+
+Saha方程: 根据Boltzmann 方程,
+\begin{equation*}
+    \frac{N_{i+1}N_\text{e}}{N_{i}} = \frac{Z_{i+1}Z_\text{e}}{Z_{i}}.
+\end{equation*}
+其中
+\begin{equation*}
+    Z_{i+1} = \sum_j g_{i+1,j} e^{-E_{i+1,j}/kT},
+\end{equation*}
+\begin{equation*}
+    Z_{i} = \sum_j g_{i,j} e^{-E_{i,j}/kT},
+\end{equation*}
+\begin{equation*}
+    Z_\text{e} =  \int g_\text{e} e^{-[(p_x^2+p_y^2+p_z^2)/2m_\text{e}]/kT} \frac{\mathrm{d}x\mathrm{d}y\mathrm{d}z\mathrm{d}p_x\mathrm{d}p_y\mathrm{d}p_z}{h^3}.
+\end{equation*}
+上面三式都以束缚-自由临界状态能量为能量零点, 其中第三式运用了结论``一个微观状态等价于$xp_xyp_yzp_z$空间中体积为$h^3$的小区域''.
+下面计算$Z_e$. $g_\text{e}=2$, 因此
+\begin{equation*}
+    Z_\text{e} = \frac{2\int\mathrm{d}x\mathrm{d}y\mathrm{d}z}{h^3} \int e^{-(p_x^2+p_y^2+p_z^2)/2m_\text{e}kT}\mathrm{d}p_x\mathrm{d}p_y\mathrm{d}p_z,
+\end{equation*}
+显然$V=\int\mathrm{d}x\mathrm{d}y\mathrm{d}z$, 后面是Gauss积分很好算, 结果就是
+\begin{equation*}
+    Z_\text{e} = \frac{2V}{h^3} (\sqrt{2\pi}\sqrt{m_\text{e}kT})^3 = 2 V \left(\frac{2\pi m_\text{e}kT}{h^2}\right)^{3/2} = 2 V \left(\frac{h}{\sqrt{2\pi m_\text{e}kT}}\right)^{-3}.
+\end{equation*}
+令
+\begin{equation*}
+    \widetilde{Z}_{i+1}  = \sum_j g_{i+1,j} e^{-(E_{i+1,j}-E_{i+1,1})/kT},
+\end{equation*}
+\begin{equation*}
+    \widetilde{Z}_{i}  = \sum_j g_{i,j} e^{-(E_{i,j}-E_{i,1})/kT},
+\end{equation*}
+\begin{equation*}
+    z_\text{e}  = 2 \left(\frac{2\pi m_\text{e}kT}{h^2}\right)^{3/2},
+\end{equation*}
+则由$\chi=E_{i+1,1}-E_{i,1}$和$n_\text{e}=N_\text{e}/V$可得
+\begin{equation*}
+    \frac{N_{i+1}n_\text{e}}{N_{i}} = \frac{\widetilde{Z}_{i+1}z_\text{e}}{\widetilde{Z}_{i}}e^{-\chi/kT}.
+\end{equation*}
+HII只有一种状态, $S=0$, 根据$S$和$Z$的关系可得$Z_\text{HII}=1$.
+
+分光视差(spectroscopic parallax)~$d=100^{(m-M)/5}$, $m$当然可测, $M$通过看光谱比对H-R图可测, 和视差没有半毛关系!
