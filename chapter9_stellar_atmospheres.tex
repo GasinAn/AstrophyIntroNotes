@@ -1,0 +1,143 @@
+\chapter{恒星大气\\Stellar Atmospheres}
+
+比强度(specific density)~$I_\lambda$: 垂直于单位面积方向的单位立体角内单位时间通过的单位波长的能量. 对于黑体, $I_\lambda=B_\lambda$.
+
+$\mathrm{d}\Omega=\mathrm{d}\phi(\sin\theta\,\mathrm{d}\theta)$.
+
+平均强度(mean density)~$\left\langle I_\lambda\right\rangle $: 比强度对立体角求平均.
+\begin{equation*}
+    \left\langle I_\lambda\right\rangle = \frac{\int I_\lambda \,\mathrm{d}\Omega}{\int \,\mathrm{d}\Omega}=\frac{\int I_\lambda \,\mathrm{d}\Omega}{4\pi}.
+\end{equation*}
+对于黑体, $\left\langle I_\lambda\right\rangle=I_\lambda=B_\lambda$.
+
+比能量密度(specific energy density)~$u_\lambda$: 首先假设只有一个方向的辐射强度, 取个垂直于这个方向的小面$\Delta A$, 在$\Delta t$时间内通过能量$I_\lambda \Delta A \Delta t$, 这些能量充斥了$\Delta A (c \Delta t)$的体积, 所以有$I_\lambda \Delta A \Delta t = u_\lambda \Delta A (c \Delta t)$, $u_\lambda = I_\lambda/c$. 可以证明任何小体元$V$内都有$\int_V u_\lambda = \int_V I_\lambda/c$. 现在辐射强度在任意方向都有, 所以要对立体角求和, 故有
+\begin{equation*}
+    u_\lambda = \int I_\lambda/c\,\mathrm{d}\Omega = 4\pi\left\langle I_\lambda\right\rangle/c.
+\end{equation*}
+对于黑体, $u=(4\sigma/c)\,T^4:=aT^4$.
+
+比辐射流量(specific radiative flux)~$F_\lambda$: 把垂直于面元的辐射分量$I_\lambda\cos\theta$对立体角求和, 得到垂直于单位面积方向单位时间通过的单位波长的总能量, 即
+\begin{equation*}
+    F_\lambda = \int I_\lambda \cos\theta \,\mathrm{d}\Omega.
+\end{equation*}
+对于黑体, 只计算$\theta\le\pi/2$的部分, 可得$F=\sigma T^4=\pi \left\langle I_\lambda\right\rangle$.
+
+辐射压强(radiation pressure)~$P_\lambda$: 反射情形下, $P_\lambda$要用辐射到板上的动量的法向分量的2倍来算. 首先, 由能量得到动量, 要除以$c$. 其次, $\theta$方向的辐射不垂直于板, $\Delta A$的实际有效面积只有$\Delta A \cos\theta$, 所以要乘以$\cos\theta$. 最后, 动量只取法向分量, 要再乘以$\cos\theta$. 只$\theta\le\pi/2$的部分有贡献, 所以有
+\begin{equation*}
+    P_\lambda = 2\int_{\theta\le\pi/2} I_\lambda\cos^2\theta/c \,\mathrm{d}\Omega.
+\end{equation*}
+对于透射情形, $P_\lambda$是面元$\theta<\pi/2$ 部分单位时间的动量改变量\footnote{单位时间的动量改变量不就是力么, 面元上的力不就是压强么\dots}. 首先$\theta<\pi/2$ 部分无论是吃光子还是吐光子, 动量改变都是一份, 所以不需要2倍的因子. 其次既要考虑进入$\theta<\pi/2$部分的光子(运动方向$\theta<\pi/2$)的动量也要考虑离开$\theta<\pi/2$部分的光子(运动方向$\theta>\pi/2$)的动量. 所以有
+\begin{equation*}
+    P_\lambda = \int I_\lambda\cos^2\theta/c \,\mathrm{d}\Omega.
+\end{equation*}
+对于黑体, $P=(1/3)\,u$.
+
+对面源, 测得的是$I_\lambda$, 不随距离变化.
+
+对点源, 测得的是$F_\lambda$, 和距离呈平方反比.
+
+\begin{itemize}
+    \item 有效温度(effective temperature): Stefan-Boltzmann律
+    \item 激发温度(excitation temperature): Boltzmann方程.
+    \item 电离温度(ionization temperature): Saha方程.
+    \item 运动温度(kinetic temperature): Maxwell-Boltzmann分布.
+    \item 色温度(color temperature): Planck律.
+\end{itemize}
+
+热动平衡(thermodynamics equilibrium): 所有正逆反应速率相同.
+
+局部热动平衡(local thermodynamics equilibrium): 温度显著变化的距离大于粒子和光子的平均自由程, 粒子和光子不能逃出某范围, 在这范围内可以定义一个``这范围内的温度''.
+
+平均自由程(mean free path)~$\ell$, 碰撞截面(collision cross section)~$\sigma$. $1/n=\sigma\ell$. $\sigma_\text{HI}=\pi(2a_\text{Bohr})^2$.
+
+吸收系数(absorption coefficient)/不透明度\footnote{
+    这里的不透明度是``质量不透明度'', 单位是$\text{m}^2/\text{kg}$, 乘上$\rho$是``体积不透明度'', 单位是$\text{m}^2/\text{m}^3$.
+}(opacity)~$\kappa_\lambda$.
+
+$\mathrm{d}I_\lambda
+=-I_\lambda\kappa_\lambda\rho\,\mathrm{d}s$.
+$\ell=1/\kappa_\lambda\rho$.
+
+光深(optical depth)~$\tau_\lambda$.
+$\mathrm{d}\tau_\lambda=\kappa_\lambda\rho\,\mathrm{d}s$, $\mathrm{d}s=\ell\,\mathrm{d}\tau_\lambda$, 无量纲.
+
+\begin{itemize}
+    \item Thomson散射: 自由电子.
+    \item Compton散射: 高轨束缚电子, 光子动量远大于粒子动量, 光子能量远小于电子静能时$\to$~Thomson散射.
+    \item Rayleigh散射: 高轨束缚电子, 光子动量远小于粒子动量, 粒子尺度远小于波长\footnote{粒子尺度与波长相当时是Mie散射.}, $\sigma \propto \lambda^{-4}$.
+\end{itemize}
+
+Kramers不透明度律: $\bar{\kappa}=\kappa_0\rho/T^{3.5}$.
+
+$\kappa_0$近似常量, $\rho$单位$\text{kg}/\text{m}^3$, $T$单位$\text{K}$.
+
+电子散射, $\bar{\kappa}=0.02\,(1+X)\,\text{m}^2/\text{kg}$.
+
+随机行走(random walk), $d^2=N\ell^2$, $d=\ell\tau_\lambda$, $N=\tau_\lambda^2$, $\tau_\lambda\approx 2/3$原则.
+
+发射系数(emission coefficient)~$j_\lambda$.
+
+$\mathrm{d}I_\lambda
+=j_\lambda\rho\,\mathrm{d}s$.
+
+源函数(source function)~$S_\lambda=j_\lambda/\kappa_\lambda$. 对于黑体, $S_\lambda=B_\lambda$.
+
+平面平行层大气(plane-parallel atmosphere), 垂直光深(vertical optical depth)~$\tau_{\lambda,\text{v}}$, 注意到$\kappa_\lambda$, $j_\lambda$, $S_\lambda$无方向性,
+\begin{equation*}
+    \frac{\mathrm{d}}{\mathrm{d}\tau_{\lambda,\text{v}}}I_\lambda\cos\theta=I_\lambda-S_\lambda.
+\end{equation*}
+灰大气(gray atmosphere), $\kappa_\lambda=\bar{\kappa}$. 对波长积分,
+\begin{equation*}
+    \frac{\mathrm{d}}{\mathrm{d}\tau_{\text{v}}}I\cos\theta=I-S.
+\end{equation*}
+上式对立体角积分和左右乘以$\cos\theta/c$后对立体角积分, 得
+\begin{equation*}
+    \begin{cases}
+        \frac{\mathrm{d}}{\mathrm{d}\tau_{\text{v}}}F=4\pi \left\langle I\right\rangle -4\pi S , \\
+        \frac{\mathrm{d}}{\mathrm{d}\tau_{\text{v}}}P=F/c-0 . \\
+    \end{cases}
+\end{equation*}
+$F=\sigma T_\text{e}^4$不随$\tau_{\text{v}}$变化, 所以
+\begin{equation*}
+    \begin{cases}
+        \left\langle I\right\rangle = S , \\
+        P-P_0=(F/c)\tau_{\text{v}} . \\
+    \end{cases}
+\end{equation*}
+Eddington近似: 向外$I_\text{out}$相同, 向内$I_\text{in}$相同, 则
+\begin{equation*}
+    \begin{cases}
+        F=(\pi)(I_\text{out}-I_\text{in}) , \\
+        P=(2\pi/3c)(I_\text{out}+I_\text{in}) . \\
+    \end{cases}
+\end{equation*}
+$\tau_{\text{v}}$时$I_\text{in}=0$, 可得$P_0=(2\pi/3c)I_\text{out}=2F/3c$, 所以
+\begin{equation*}
+    P=(F/c)(\tau_{\text{v}}+2/3).
+\end{equation*}
+恰好有$P=(4\pi/3c)\left\langle I\right\rangle $, LTE, $\left\langle I\right\rangle=S=B=(\sigma/\pi)\,T^4$, 所以
+\begin{equation*}
+    T^4 = \frac{3}{4}(\tau_{\text{v}}+\frac{2}{3})T_\text{e}^4.
+\end{equation*}
+
+等值宽度(equivalent width)~$W$,
+\begin{equation*}
+    W:=\int\frac{F_\text{c}-F(\lambda)}{F_\text{c}}\,\mathrm{d}\lambda.
+\end{equation*}
+是令连续谱($F(\lambda)=F_\text{c}$)等于$1$后求等值宽度.
+
+\begin{itemize}
+    \item 自然致宽: 不确定性原理, 可以无视.
+    \item Doppler致宽: Maxwell-Boltzmann分布.
+    \item 碰撞致宽: 原子原子撞.
+    \item 压强致宽: 原子深入离子电场, 广义包括碰撞致宽.
+\end{itemize}
+佛脱轮廓(Voigt profile): Doppler轮廓和阻尼(damping)轮廓(又称Lorentz轮廓)的叠加. Doppler轮廓瘦高, 阻尼轮廓矮胖.
+
+Schuster-Schwarzschild模型: 恒星光球是黑体辐射源; 光球外的原子产生吸收线.
+
+柱密度(column density): 光球单位面积外面的原子数.
+
+f值(f-value)/振子强度(oscillator strength): 从相同初态跃迁到不同终态的相对概率.
+
+生长曲线: 自变量为能发生某跃迁的原子的柱密度(对数), 因变量为此跃迁产生的谱线的等值宽度(对数).
