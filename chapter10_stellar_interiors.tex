@@ -1,0 +1,109 @@
+\chapter{恒星内部\\The Interiors of Stars}
+
+流体静力学平衡方程(hydrostatic equilibrium equation):
+\begin{equation*}
+    \frac{\mathrm{d} P}{\mathrm{d} r}
+    = -G\frac{M_r\rho}{r^2},
+\end{equation*}
+即$-GM_r(\rho\,\mathrm{d}A\mathrm{d}r)/r^2=\Delta P\mathrm{d}A$.
+
+质量守恒方程(mass conservation equation):
+\begin{equation*}
+    \frac{\mathrm{d} M_r}{\mathrm{d} r}
+    = 4\pi r^2\rho,
+\end{equation*}
+即$\mathrm{d} M_r=\rho (4\pi r^2\mathrm{d} r)$.
+
+理想气体的压强积分(pressure integral):
+\begin{equation*}
+    P=\frac{1}{3}n(\overline{\b{p}\cdot\b{v}}).
+\end{equation*}
+平均是数量平均. 记忆法: 压强只需考虑一个朝向固定的板, 由各向同性, 对任意方向$i$,
+\begin{equation*}
+    P=n\bar{p}_i\bar{v}_i.
+\end{equation*}
+而$P\Delta S = \Delta p_i/\Delta t$, $P\Delta S \Delta t= \Delta p_i$, $P\Delta S (\bar{v}_i\Delta t)= P\Delta V$, $\Delta p_i \bar{v}_i = \Delta N \bar{p}_i\bar{v}_i$, $P=(\Delta P/\Delta V)\bar{p}_i\bar{v}_i=n\bar{p}_i\bar{v}_i$. 另一种记忆法是量纲法: 因为是状态量, 所以$P$与$n$, $\bar{p}_i$, $\bar{v}_i$有关, 已知$P=nkT$, 由能量均分定理知$kT$与$\bar{p}_i\bar{v}_i$同量纲(非相对论情形下甚至相同), 所以蒙$P=n\bar{p}_i\bar{v}_i$.
+
+平均分子量(mean modular weight)~$\mu:=\bar{m}/m_\text{H}:=(\rho/n)/m_\text{H}$.
+
+完全中性气体, $A_j:=m_j/m_\text{H}$(相当于原子核内重子数),
+\begin{equation*}
+    \mu_\text{n}=\frac{\sum_j N_j A_j}{\sum_j N_j}.
+\end{equation*}
+
+完全电离气体, 原子$j$的电子数$z_j$,
+\begin{equation*}
+    \mu_\text{i}\simeq\frac{\sum_j N_j A_j}{\sum_j N_j(1+z_j)}.
+\end{equation*}
+也就是说电子质量不管了.
+
+强行假设恒星密度均匀, 蒙
+\begin{equation*}
+    E\sim-\frac{3}{10}\frac{GM^2}{R^2}.
+\end{equation*}
+
+Kelvin-Helmholtz时标.
+
+核时标.
+
+反应截面(cross section)~$\sigma(E)$. 理解1: 入射粒子有特定能量时, 单位时间单个目标粒子的反应数, 比上单位时间目标粒子附近单位面积通过的入射粒子数. 理解2: 入射粒子有特定能量时, 目标粒子附近的一块面积, 当且仅当通过这块面积的入射粒子和目标粒子反应.
+
+反应率(reaction rate)~$r_{ix}$: 单位时间单位体积的反应数.
+
+Gamow峰: 使得$\mathrm{d}r_{ix}/\mathrm{d}E$最大的能量. 严格说来不含缓变函数$S(E)$的影响.
+
+电子屏蔽(electron screening): 自由电子包在原子核周围, 使之有效电荷减小, 势阱降低, 反应更容易发生.
+
+产能率(energy generation rate)~$\epsilon_{ix}$: 单位时间单位质量物体反应释放的能量.
+
+光度梯度方程(luminosity gradient equation)/能量守恒方程(energy conservation equation)\footnote{前面书上的名称, 后面老师视频里的名称.}:
+\begin{equation*}
+    \frac{\mathrm{d} L_r}{\mathrm{d} r}
+    = 4\pi r^2\rho\epsilon,
+\end{equation*}
+即$\mathrm{d} L_r = \epsilon\,\mathrm{d} M_r= \epsilon[\rho(4\pi r^2\mathrm{d} r)]$.
+
+电荷守恒, 核子守恒, 轻子守恒(正轻子记$+1$, 反轻子记$-1$).
+
+$T_n$: 以$10^n\text{K}$为单位. 乱七八糟的量都约为$1$.
+
+辐射温度梯度:
+\begin{equation*}
+    \begin{cases}
+        \frac{\mathrm{d}P}{\mathrm{d}\tau}=\frac{F}{c}, \\
+        \mathrm{d}\tau = -\bar{\kappa}\rho\,\mathrm{d}r, \\
+         P=\frac{aT^4}{3}, \\
+         F=\frac{L_r}{4\pi r^2}. \\
+    \end{cases}
+\end{equation*}
+
+压强标高(pressure scale height)~$H_P$: $P=P_0e^{-r/H_P}$.
+
+理想气体, $C_P-C_V$~``$=$''~$1$, $C_V$~``$=$''~$(\text{自由度})/2$. $\gamma=C_P/C_V$. 有电离, 不论定什么过程, 能量都大部分用于电离, 所以$C_P$和$C_V$巨大, $\gamma$约等于$1$.
+
+理想气体, 绝热过程, $PV^\gamma=\text{const}$.
+
+声速$\sqrt{\partial P/\partial \rho}$~(振动, $P$和$\rho$是力学强度量, 量纲), $P
+\rho^{-\gamma}=\text{const}$.
+
+绝热温度梯度:
+\begin{equation*}
+    \begin{cases}
+        P\propto \rho T, \\
+        P\rho^{-\gamma} \propto 1. \\
+    \end{cases}
+\end{equation*}
+
+超绝热(superadiabatic): 实际温度梯度大于绝热温度梯度. 超绝热等价于对流. 对流时, 超绝热但接近绝热, 绝热温度梯度公式适用.
+
+温度梯度大的不容易发生. 大恒星中心, 产能率高, 光度大, 对流. 小恒星边缘, 不透明度大, 且正电离, $\gamma$约等于$1$, 对流.
+
+混合长理论(mixed-length theory): 假设泡泡能运动和压强标高$H_P$相当的距离$\ell$, 令$\ell=\alpha H_P$; $\delta(\mathrm{d}T/\mathrm{d}r)$是实际温度梯度(大小)减绝热温度梯度(大小); $f$是单位体积泡泡所受合力, 即浮力减重力; 假设泡泡平均速度$\bar{v}$满足$\rho\bar{v}^2/2=\beta\langle f\rangle\ell$, 其中$0<\beta<1$; 最后得出对流流量$F=L_r/4\pi r^2$的表达式.
+
+Vogt-Russell定理: 质量和化学组成唯一决定.
+
+多方模型(polytropic model), $\gamma:=(n+1)/n$, $\rho:=\rho|_{r=0}(D_n)^n$, $r:=\lambda_n\xi$, Lane-Emden方程. $P|_{r=R}=0$, $(\mathrm{d}P/\mathrm{d}r)|_{r=0}=0$. $0\le n \le 5$\footnote{
+    $n=5$时半径无限, 但质量有限. $n>5$时质量无限.
+}. 假设各处气体压和辐射压比例相同, 可得Eddington标准模型$n=3$.
+
+Eddington极限: $\mathrm{d}P/\mathrm{d}r=\mathrm{d}P_\text{rad}/\mathrm{d}r$. 对大质量恒星, $\bar{\kappa}$主要由电子屏蔽导致, 可用上一章的公式.
