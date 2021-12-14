@@ -13,13 +13,33 @@ $1\text{rad}\simeq 206265''$, $1\text{pc}\simeq 206265\text{AU}\simeq 3.26\text{
     F = \frac{L}{4\pi r^2}.
 \end{equation*}
 
-绝对星等(absolute magnitude)~$M$: $10\text{pc}$处视星等. 距离模数(distance modulus)~$m-M$. 自己推距离模数公式\footnote{第二个作业!}.
+绝对星等(absolute magnitude)~$M$: $10\text{pc}$处视星等. 距离模数(distance modulus)~$m-M$. 作业: 推导距离模数公式.
 
 Stefan-Boltzmann律: $F=\sigma T^4$.~$B(T)=\sigma T^4/\pi$: 黑体垂直于单位面元方向单位立体角内单位时间辐射的能量.
 \begin{equation*}
     F = \int_{\theta\in[0,\pi]}B\cos\theta\,\mathrm{d}\Omega.
 \end{equation*}
-Wien位移\footnote{~``位移''的英文是displacement.}律: $\lambda_\text{max}T=(500\text{nm})(6000\text{K})$.
+Wien位移\footnote{~``位移''的英文是displacement.}律: $\lambda_\text{max}T\simeq(500\text{nm})(6000\text{K})$.
+
+Planck函数: 
+\begin{equation*}
+    B_\nu(T)=\frac{2h\nu^3/c^2}{e^{h\nu/kT}-1}.
+\end{equation*}
+$B_\nu(T)$单位: $\text{J}/(\text{Hz}\cdot\text{s}\cdot\text{m}^2\cdot\text{sr})$. 作业: 推导$B_\lambda(T)$.
+
+Planck函数的证明:
+\begin{equation*}
+    u_\nu(T)=\frac{4\pi}{c}B_\nu(T).
+\end{equation*}
+\begin{equation*}
+    [u_\nu(T)\mathrm{d}\nu]V=\bar{\epsilon}(\nu)g(\nu)\mathrm{d}\nu.
+\end{equation*}
+\begin{equation*}
+    \bar{\epsilon}(\nu)=\frac{h\nu}{e^{h\nu/kT}-1}=\sum_n (nh\nu)\frac{e^{-nh\nu/kT}}{\sum_n e^{-nh\nu/kT}}.
+\end{equation*}
+\begin{equation*}
+    g(\nu)\mathrm{d}\nu=2\left[4\pi\left(\frac{L\nu}{c}\right)^2\mathrm{d}\left(\frac{L\nu}{c}\right)\right].
+\end{equation*}
 
 色指数(color index)~$X-Y$: 不同``波段''视星等的差, 等于不同``波段''绝对星等的差. 热星等(bolometric magnitude)~$m_\text{bol}$和$M_\text{bol}$: 全波段星等. 热改正(bolometric correction)~$BC=m_\text{bol}-V=M_\text{bol}-M_V$.
 
