@@ -1,5 +1,38 @@
 \chapter{恒星大气\\Stellar Atmospheres}
 
+\begin{itemize}
+    \item 有效温度(effective temperature): Stefan-Boltzmann律
+    \item 激发温度(excitation temperature): Boltzmann方程.
+    \item 电离温度(ionization temperature): Saha方程.
+    \item 运动温度(kinetic temperature): Maxwell-Boltzmann分布.
+    \item 色温度(color temperature): Planck律.
+\end{itemize}
+
+不透明度(opacity) $\kappa_\lambda$, $\mathrm{d}I_\lambda
+=-I_\lambda\kappa_\lambda\rho\,\mathrm{d}s$, 单位$\text{m}^2/\text{kg}$.
+
+光深(optical depth) $\tau_\lambda$, $\mathrm{d}\tau_\lambda=-\kappa_\lambda\rho\,\mathrm{d}s$, 无量纲.
+
+辐射转移方程:
+\begin{equation*}
+    -\frac{1}{\kappa_\lambda\rho}\frac{\mathrm{d}I_\lambda}{\mathrm{d}s}
+    =I_\lambda-S_\lambda.
+\end{equation*}
+
+等值宽度(equivalent width)~$W$,
+\begin{equation*}
+    W:=\int\frac{F_\text{c}-F(\lambda)}{F_\text{c}}\,\mathrm{d}\lambda.
+\end{equation*}
+
+\begin{itemize}
+    \item 自然致宽: 不确定性原理, 激发态有寿命$\Delta t$ $\Rightarrow$激发态能量弥散$\Delta E$ $\Rightarrow$光子能量弥散$\Rightarrow$光子波长弥散, 似乎通常可以无视(Doppler致宽千分之一, 广义压强致宽同量级或低一量级).
+    \item Doppler致宽: Maxwell-Boltzmann分布, 产生瘦高Doppler轮廓.
+    \item 碰撞致宽: 原子和其他原子碰撞, 轨道改变而致宽.
+    \item 压强致宽: 原子深入离子电场, 轨道改变而致宽, 广义包括碰撞致宽, 正比于数密度, 一同产生矮胖阻尼轮廓(又称Lorentz轮廓, 自然致宽也是这个轮廓).
+\end{itemize}
+
+补充内容:
+
 比强度(specific density)~$I_\lambda$: 垂直于单位面积方向的单位立体角内单位时间通过的单位波长的能量. 对于黑体, $I_\lambda=B_\lambda$.
 
 $\mathrm{d}\Omega=\mathrm{d}\phi(\sin\theta\,\mathrm{d}\theta)$.
@@ -36,14 +69,6 @@ $\mathrm{d}\Omega=\mathrm{d}\phi(\sin\theta\,\mathrm{d}\theta)$.
 
 对点源, 测得的是$F_\lambda$, 和距离呈平方反比.
 
-\begin{itemize}
-    \item 有效温度(effective temperature): Stefan-Boltzmann律
-    \item 激发温度(excitation temperature): Boltzmann方程.
-    \item 电离温度(ionization temperature): Saha方程.
-    \item 运动温度(kinetic temperature): Maxwell-Boltzmann分布.
-    \item 色温度(color temperature): Planck律.
-\end{itemize}
-
 热动平衡(thermodynamics equilibrium): 所有正逆反应速率相同.
 
 局部热动平衡(local thermodynamics equilibrium): 温度显著变化的距离大于粒子和光子的平均自由程, 粒子和光子不能逃出某范围, 在这范围内可以定义一个``这范围内的温度''.
@@ -59,7 +84,7 @@ $\mathrm{d}I_\lambda
 $\ell=1/\kappa_\lambda\rho$.
 
 光深(optical depth)~$\tau_\lambda$.
-$\mathrm{d}\tau_\lambda=\kappa_\lambda\rho\,\mathrm{d}s$, $\mathrm{d}s=\ell\,\mathrm{d}\tau_\lambda$, 无量纲.
+$\mathrm{d}\tau_\lambda=-\kappa_\lambda\rho\,\mathrm{d}s$, $\mathrm{d}s=-\ell\,\mathrm{d}\tau_\lambda$, 无量纲.
 
 \begin{itemize}
     \item Thomson散射: 自由电子.
@@ -127,12 +152,12 @@ $\tau_{\text{v}}$时$I_\text{in}=0$, 可得$P_0=(2\pi/3c)I_\text{out}=2F/3c$, �
 是令连续谱($F(\lambda)=F_\text{c}$)等于$1$后求等值宽度.
 
 \begin{itemize}
-    \item 自然致宽: 不确定性原理, 可以无视.
-    \item Doppler致宽: Maxwell-Boltzmann分布.
-    \item 碰撞致宽: 原子原子撞.
-    \item 压强致宽: 原子深入离子电场, 广义包括碰撞致宽.
+    \item 自然致宽: 不确定性原理, 激发态有寿命$\Delta t$ $\Rightarrow$激发态能量弥散$\Delta E$ $\Rightarrow$光子能量弥散$\Rightarrow$光子波长弥散, 似乎通常可以无视(Doppler致宽千分之一, 广义压强致宽同量级或低一量级).
+    \item Doppler致宽: Maxwell-Boltzmann分布, 产生瘦高Doppler轮廓.
+    \item 碰撞致宽: 原子和其他原子碰撞, 轨道改变而致宽.
+    \item 压强致宽: 原子深入离子电场, 轨道改变而致宽, 广义包括碰撞致宽, 正比于数密度, 一同产生矮胖阻尼轮廓(又称Lorentz轮廓, 自然致宽也是这个轮廓).
 \end{itemize}
-佛脱轮廓(Voigt profile): Doppler轮廓和阻尼(damping)轮廓(又称Lorentz轮廓)的叠加. Doppler轮廓瘦高, 阻尼轮廓矮胖.
+佛脱轮廓(Voigt profile): Doppler轮廓和阻尼(damping)轮廓的叠加. Doppler轮廓瘦高, 阻尼轮廓矮胖.
 
 Schuster-Schwarzschild模型: 恒星光球是黑体辐射源; 光球外的原子产生吸收线.
 
