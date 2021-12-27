@@ -1,3 +1,48 @@
 \chapter{巨行星的领域\\The Realms of the Giant Planets}
 
-略.
+引力势展开式:
+\begin{equation*}
+    V=\frac{GM}{r}
+    \sum_{n=0}^{\infty}
+    \sum_{m=0}^{n}
+    \left(\frac{R}{r}\right)^n
+    P_n^{m}(\cos\theta)(C_n^{m}\cos m\phi+S_n^{m}\sin m\phi),
+\end{equation*}
+其中连带(associated) Legendre函数定义为
+\begin{equation*}
+    P_n^{m}(z)=(1-z^2)^{m/2}\frac{\mathrm{d}^m}{\mathrm{d}z^m}P_n(z),
+\end{equation*}
+Legendre函数定义为
+\begin{equation*}
+    \frac{1}{\sqrt{1+s^2-2sz}}=\sum_{n=0}^{\infty}P_n(z)s^n.
+\end{equation*}
+注意不同地方Legendre函数和连带Legendre函数的定义可能不同!
+
+可以证明:
+\begin{itemize}
+    \item $\forall n, S_n^0=0$,
+    \item $\forall m, C_1^m=S_1^m=0$.
+\end{itemize}
+定义$J_n=-C_n^0$, 则
+\begin{equation*}
+    V=\frac{GM}{r}\left\{
+        1
+        -\sum_{n=2}^{\infty}
+        \left(\frac{R}{r}\right)^n\left[
+            J_nP_n(\cos\theta)
+            +\sum_{m=1}^{n}
+            P_n^{m}(\cos\theta)(C_n^{m}\cos m\phi+S_n^{m}\sin m\phi)
+        \right]
+    \right\}.
+\end{equation*}
+
+若球对称, 则有
+\begin{equation*}
+    V=\frac{GM}{r}\left[
+        1
+        -\sum_{n=2}^{\infty}
+        \left(\frac{R}{r}\right)^n
+        J_nP_n(\cos\theta)       
+    \right],
+\end{equation*}
+并且当$n$为奇数时$J_n=0$.
